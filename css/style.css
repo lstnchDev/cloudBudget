@@ -1,0 +1,517 @@
+@charset "UTF-8";
+:root {
+  --color-red: #ED4C5C;
+  --color-white: #FFFFFF;
+  --color-bg-gray: #FAFAFA;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url("../fonts/roboto/Roboto-Light.ttf");
+}
+/* Указываем box sizing */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Убираем внутренние отступы */
+ul[class],
+ol[class] {
+  padding: 0;
+}
+
+/* Убираем внешние отступы */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+  padding: 0;
+}
+
+/* Выставляем основные настройки по-умолчанию для body */
+body {
+  min-height: 100vh;
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+  line-height: 1.3;
+  font-family: "Roboto";
+}
+
+/* Удаляем стандартную стилизацию для всех ul и il, у которых есть атрибут class*/
+ul[class],
+ol[class] {
+  list-style: none;
+}
+
+/* Упрощаем работу с изображениями */
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* Наследуем шрифты для инпутов и кнопок */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+html{
+  scroll-behavior: smooth;
+}
+.wrap {
+  max-width: 1100px;
+  min-width: 320px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.header-wrap {
+  background: var(--color-red) url(../img/bg-header.png) top center no-repeat;
+  background-size: cover;
+  padding: 50px 0 200px;
+}
+
+a {
+  text-decoration: none;
+  color: var(--color-red);
+}
+
+.header-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-transform: uppercase;
+}
+
+.menu {
+  display: flex;
+  flex-wrap: wrap;
+  list-style-type: none;
+}
+
+.menu a {
+  color: var(--color-white);
+  padding-left: 25px;
+  font-size: 0.875rem;
+}
+
+.transparent-btn {
+  color: var(--color-white);
+  border: 1px solid var(--color-white);
+  padding: 10px 30px;
+  border-radius: 6px;
+  font-size: 0.875rem;
+}
+
+.header-content {
+  max-width: 580px;
+  margin: 0 auto;
+  margin-top: 185px;
+  text-align: center;
+  color: var(--color-white);
+}
+
+.header-content h1 {
+  font-size: 4.5rem;
+  text-transform: uppercase;
+  margin-bottom: 40px;
+  font-weight: 700;
+}
+
+.header-content h2 {
+  font-size: 1.5rem;
+  line-height: 1.5;
+  margin-bottom: 60px;
+  font-weight: 500;
+}
+
+.white-btn {
+  background-color: var(--color-white);
+  color: var(--color-red);
+  font-size: 0.875rem;
+  padding: 15px 50px;
+  text-transform: uppercase;
+  font-weight: 600;
+  border-radius: 6px;
+}
+
+.about-block {
+  display: flex;
+  padding: 95px 0;
+}
+
+.about-block-text, .about-block-image {
+  max-width: 40%;
+  margin-right: 10%;
+  align-self: center;
+}
+
+.about-block-text h2 {
+  font-size: 2.25rem;
+  font-weight: 500;
+  margin-bottom: 2rem;
+}
+
+.about-block-text p {
+  font-size: 0.875rem;
+  margin-bottom: 1rem;
+}
+
+.features-container {
+  background-color: var(--color-bg-gray);
+  padding: 70px 0 125px 0;
+}
+
+.features-wrap {
+  text-align: center;
+}
+
+.features-wrap h2 {
+  padding: 4rem 0;
+  font-size: 2.25rem;
+  font-weight: 500;
+}
+
+.features-wrap h3 {
+  margin-bottom: 20px;
+  font-size: 1.125rem;
+  font-weight: 700;
+}
+
+.features-wrap p {
+  margin-bottom: 20px;
+  font-size: 0.75rem;
+}
+
+.features-block {
+  display: flex;
+  justify-content: space-between;
+  gap: 1em;
+}
+
+.features-block-item {
+  max-width: 350px;
+  display: flex;
+  flex-direction: column;
+}
+
+.features-block-text {
+  background: var(--color-white);
+  padding: 20px 20px 10px 20px;
+  box-shadow: 0px 5px 30px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  margin: -95px 30px 0 30px;
+  z-index: 1;
+  position: relative;
+  flex-grow: 1;
+}
+
+.technology {
+  padding: 70px 0 130px 0;
+  text-align: center;
+}
+
+.technology h2 {
+  font-size: 2.25rem;
+  font-weight: 600;
+  padding-bottom: 65px;
+}
+
+.technology-block {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1em;
+}
+
+.technology-block-item {
+  align-items: center;
+  max-width: 200px;
+  display: flex;
+  flex-direction: column;
+}
+
+.technology-block-item h3 {
+  font-weight: 700;
+  font-size: 1.125rem;
+  padding: 10px 0;
+}
+
+.technology-block-item p {
+  font-weight: 400;
+  font-size: 0.75rem;
+  margin: 10px 0;
+}
+
+.technology-block-item img {
+  margin-top: -60px;
+  max-height: 65px;
+}
+
+.numbers {
+  font-weight: 700;
+  font-size: 6.25rem;
+  color: rgba(16, 16, 16, 0.08);
+}
+
+.focused-container {
+  background-color: var(--color-red);
+}
+
+.focused {
+  display: flex;
+  justify-content: space-around;
+  padding: 95px 0;
+  align-items: center;
+}
+
+.focused-text, focused-image {
+  width: 40%;
+  margin-right: 10%;
+}
+
+.focused-text h2 {
+  color: var(--color-white);
+  font-size: 2.25rem;
+  font-weight: 600;
+}
+
+.focused-text p {
+  color: var(--color-white);
+  font-size: 0.875rem;
+  font-weight: 400;
+  padding: 50px 0 40px;
+}
+
+.download-icons {
+  display: flex;
+  align-items: center;
+}
+
+.download-icons a {
+  margin-right: 25px;
+}
+
+.contact {
+  display: flex;
+  padding: 120px 0;
+  justify-content: space-between;
+}
+
+.contact-text {
+  width: 40%;
+  margin-right: 10%;
+}
+
+.contact-form {
+  width: 50%;
+}
+
+.contact-text h2 {
+  font-size: 2.25rem;
+  font-weight: 600;
+  margin-bottom: 60px;
+}
+
+.contact-text p {
+  font-size: 0.875rem;
+  font-weight: 400;
+}
+
+.form-names {
+  display: flex;
+  justify-content: space-between;
+}
+
+.form-names .input__txt {
+  width: 48%;
+}
+
+.input__txt {
+  width: 100%;
+  padding: 20px 30px;
+  border: 1px solid #333333;
+  border-radius: 6px;
+  color: rgba(19, 39, 67, 0.5);
+  font-size: 1rem;
+  display: block;
+  margin-bottom: 1rem;
+  outline: none;
+}
+
+.red-btn {
+  color: var(--color-white);
+  font-size: 0.875rem;
+  padding: 15px 35px;
+  text-transform: uppercase;
+  font-weight: 400;
+  border-radius: 6px;
+  background-color: var(--color-red);
+  border: none;
+  cursor: pointer;
+}
+
+.footer-container {
+  background-color: var(--color-bg-gray);
+}
+
+.footer {
+  padding: 85px 0;
+}
+
+.footer-block {
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer-items h3 {
+  font-size: 1.125rem;
+  padding-bottom: 35px;
+}
+
+.footer-items p {
+  font-size: 0.75rem;
+  font-weight: 400;
+}
+
+.phone {
+  margin: 10px 0;
+}
+
+.services-menu a {
+  color: black;
+  font-size: 0.75rem;
+  font-weight: 400;
+}
+
+.services-menu a:hover {
+  color: var(--color-red);
+}
+
+.soc-icons {
+  display: flex;
+  max-width: 66px;
+  justify-content: space-between;
+}
+
+.copyright {
+  font-size: 0.75rem;
+  font-weight: 400;
+  margin-top: 100px;
+}
+
+@media (max-width: 800px) {
+  .header-top {
+    flex-direction: column;
+  }
+  .header-top-logo {
+    order: 1;
+    align-self: flex-start;
+  }
+  .header-top-menu {
+    order: 3;
+  }
+  .header-top-button {
+    order: 2;
+    align-self: flex-end;
+    margin: -23px 0 50px 0;
+  }
+  .menu li {
+    margin-bottom: 15px;
+  }
+  .menu {
+    justify-content: center;
+  }
+  .about-block {
+    flex-direction: column-reverse;
+  }
+  .about-block-text, .about-block-image {
+    max-width: 100%;
+    margin: 0 0 2rem 1rem;
+  }
+  .features-block {
+    flex-direction: column;
+    gap: 3rem;
+    align-items: center;
+  }
+  .technology-block {
+    justify-content: space-around;
+  }
+  .technology-block-item {
+    max-width: 40%;
+  }
+  .focused {
+    flex-direction: column-reverse;
+  }
+  .focused-text, focused-image {
+    width: 100%;
+    text-align: center;
+  }
+  .focused-text {
+    margin-left: 10%;
+  }
+  .download-icons {
+    justify-content: center;
+  }
+  .contact, .form-names {
+    flex-direction: column;
+    text-align: center;
+  }
+  .contact-text, .contact-form, .form-names > .input__txt {
+    width: 100%;
+    margin-right: 10%;
+  }
+  form {
+    padding: 0 2rem;
+  }
+}
+@media (max-width: 600px) {
+  .header-content h1 {
+    font-size: 3rem;
+  }
+  .header-top {
+    margin-bottom: 100px;
+  }
+  .header-content h2 {
+    font-size: 1.125rem;
+  }
+  .about-block-text h2, .focused-text h2, .contact-text h2 {
+    font-size: 1.15rem;
+  }
+  .features-block-text h2, .technology-block h2 {
+    font-size: 2rem;
+  }
+  .footer-block {
+    flex-direction: column;
+  }
+  .footer-items, .copyright {
+    padding: 1rem 1rem;
+    margin: 0rem;
+  }
+}
+@media (max-width: 375px) {
+  .header-content h1 {
+    font-size: 2rem;
+  }
+  .technology-block {
+    flex-direction: column;
+    align-items: center;
+  }
+  .technology-block-item {
+    width: 100%;
+  }
+}
